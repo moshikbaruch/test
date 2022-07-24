@@ -10,7 +10,7 @@ spec:
     - remoteRef:
         key: slaves-jenkins-api-token-ci
       secretKey: AUTH
-  refreshInterval: 5m0s
+  refreshInterval: 5m
   secretStoreRef:
     kind: ClusterSecretStore
     name: cluster-secret-store
