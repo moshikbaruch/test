@@ -4,7 +4,7 @@ metadata:
   labels:
     argocd.argoproj.io/instance: infra-elementor-cloud-jenkins-slave
   name: ci-slave-secrets
-  namespace: cloud-ci
+  namespace: default
 spec:
   data:
     - remoteRef:
