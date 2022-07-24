@@ -1,0 +1,18 @@
+apiVersion: external-secrets.io/v1alpha1
+kind: ExternalSecret
+metadata:
+  labels:
+    argocd.argoproj.io/instance: infra-elementor-cloud-jenkins-slave
+  name: ci-slave-secrets
+  namespace: cloud-ci
+spec:
+  data:
+    - remoteRef:
+        key: slaves-jenkins-api-token-ci
+      secretKey: AUTH
+  refreshInterval: 5m
+  secretStoreRef:
+    kind: ClusterSecretStore
+    name: cluster-secret-store
+  target: {}
+
